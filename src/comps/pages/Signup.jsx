@@ -22,6 +22,10 @@ const handlePassword = (e) => {
   dispatch(updateLoginField({ field: 'password', value: e.target.value }))
 }
 
+// const handleRepeatPassword = (e) => {
+//   dispatch(updateLoginField({ field: 'repeatPassword', value: e.target.value }))
+// }
+
     return (
     <>
      <form onSubmit={handleSignup}>
@@ -33,10 +37,10 @@ const handlePassword = (e) => {
          <label> Password: </label>
          <input type="password" value={password} onChange={handlePassword}/>
        </div>
-       <div>
+       {/* <div>
          <label> Repeat Password: </label>
-         <input type="password" value={password} onChange={handlePassword}/>
-       </div>
+         <input type="password" value={repeatPassword} onChange={handleRepeatPassword}/>
+       </div> */}
        <div>
         <button> Signup </button>
        </div>

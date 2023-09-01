@@ -1,11 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updateLoginField, resetForm } from "../features/formSlice";
 import { loginUser } from "../features/authSlice";
-import { useHistory } from "react-router-dom";
+
 
 const Login = () => {
-
-  const history = useHistory();
 
   const dispatch = useDispatch();
   const { email, password } = useSelector((state) => state.form.login);
@@ -14,7 +12,6 @@ const Login = () => {
     e.preventDefault();
     dispatch(loginUser({ email, password }));
     dispatch(resetForm("login"));
-    history.push("/home");
   };
 
   const handleEmail = (e) => {
